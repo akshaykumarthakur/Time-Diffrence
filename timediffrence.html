@@ -1,0 +1,19 @@
+<script>
+function diff_hours(dt2, dt1) 
+ {
+
+	var minsDiff = Math.floor((dt2.getTime() - dt1.getTime()) / 1000 / 60);
+    var hoursDiff = Math.floor(minsDiff / 60);
+    minsDiff = minsDiff % 60;
+    return(hoursDiff + 'h and ' + minsDiff + 'm');
+/*  var diff =(dt2.getTime() - dt1.getTime()) / 1000 /60;
+    diff /= (60 * 60);
+    return Math.abs(Math.round(diff)); */
+  
+ }
+
+dt1 = new Date("October 14, 2014 11:00:00");
+dt2 = new Date("October 13, 2014 11:20:00");
+console.log(diff_hours(dt1, dt2));
+alert(diff_hours(dt1, dt2));
+</script>
